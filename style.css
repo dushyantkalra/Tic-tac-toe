@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right top,#65dfc9,rgb(165, 231, 243));
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    height: 100vh;
+    z-index: 0;
+}
+.top-part{
+    
+    max-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top-part h1{
+    font-size: 50px;
+    padding: 1rem;
+    color: whitesmoke;
+}
+.scores{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+.scores p{
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+main{
+    background : linear-gradient(to right bottom ,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10%;
+}
+.intro{
+    height: 60vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 1;
+    transition: all 1s ease;
+    
+}
+.ready{
+    font-size: 30px;
+    background: linear-gradient(to left bottom,#65dfc9,rgb(165, 231, 243));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.selection{
+    height: 60vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 2.5s ease 1s;
+}
+.game{
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease 2s;
+    
+}
+.grid{
+    height: 42vh;
+    margin: 2rem;
+    display: grid;
+    background: linear-gradient(to left bottom,#65dfc9,rgb(165, 231, 243));
+    grid-template-columns: repeat(3,120px);
+    grid-gap:15px;
+    border: none;
+    
+}
+.grid button{
+    background : linear-gradient(to right bottom ,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    border: none;
+    font-size: 30px;
+    color: blue;
+}
+.play-btn button
+{
+    border: none;
+    background: rgb(110, 240, 110);
+    height: 50px;
+    width: 140px;
+    font-size: 20px;
+    color: whitesmoke;
+    pointer-events: all;
+    cursor: pointer;
+}
+.choose{
+    font-size: 30px;   
+    background: linear-gradient(to left bottom,#65dfc9,rgb(165, 231, 243));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.character-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.O{
+    height: 80px;
+    width: 130px;
+    background:  rgb(110, 240, 110);
+    color: whitesmoke;
+    font-size: 60px;
+    border: none;
+    
+}
+.X{
+    height: 80px;
+    width: 130px;
+    background:  rgb(110, 240, 110);
+    color: whitesmoke;
+    font-size: 60px;
+    border: none;
+}
+.winner{
+    background: linear-gradient(to left bottom,#65dfc9,rgb(165, 231, 243));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
+.fadeOut{
+    opacity : 0;
+    pointer-events: none;
+    
+}
+.fadeIn{
+    opacity:1;
+    pointer-events: all;
+    cursor: pointer;
+    z-index: 2;
+}
+.strike{
+    
+    position: absolute;
+    top:16%;
+    opacity: 1;
+    transition:all 1s ;
+}
+.lineone{
+    width: 390px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 29%;
+}
+.linetwo{
+    width: 390px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 53%;
+}
+.linethree{
+    width: 390px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 77%;
+}
+.linecolone{
+    width: 265px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 53%;
+    right: 50%;
+    transform: rotateZ(90deg);
+}
+.linecolthree{
+    width: 265px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 53%;
+    left: 50%;
+    transform: rotateZ(90deg);
+}
+.linecoltwo{
+    width: 265px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 53%;
+    transform: rotateZ(90deg);
+}
+.linediagone{
+    width: 420px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 52%;
+    transform: rotateZ(37deg);
+}
+.linediagtwo{
+    width: 420px;
+    background:blue ;
+    height: 5px;
+    z-index: 5;
+    top: 52%;
+    transform:  rotateY(180deg) rotateZ(37deg) ;
+}
+.next-game{
+    border: none;
+    background: rgb(110, 240, 110);
+    height: 0px;
+    width: 0px;
+    font-size: 0px;
+    color: whitesmoke;
+    pointer-events: all;
+    cursor: pointer;
+    
+}
+.dash{
+    height: 50px;
+    width: 140px;
+    font-size: 20px;
+}
+.modes{
+    height: 60vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    pointer-events: none;
+    transition: all 1s ease 1s;
+}
+.mode{
+    font-size: 30px;   
+    background: linear-gradient(to left bottom,#65dfc9,rgb(165, 231, 243));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mode-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pvp,
+.pvc{
+    height: 80px;
+    width: 130px;
+    background:  rgb(110, 240, 110);
+    color: whitesmoke;
+    font-size: 20px;
+    border: none;
+
+}
+.fadeInmode{
+    height: 60vh;
+    width: 80vw;
+}

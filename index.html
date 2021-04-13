@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="top-part">
+        <h1>Tic-Tac-Toe</h1>
+    
+        <header class="scores">
+            <div class="player-score">
+                <h2>Player Score</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer Score</h2>
+                <p>0</p>
+            </div>
+        </header>
+    </div>
+        <main>
+            <section class="intro">
+                <div class="ready"><h2>
+                    Are you Ready ?
+                </h2>
+                </div>
+                <div class="play-btn">
+                    <button>Let's Play</button>
+                </div>
+            </section>
+            <section class="selection">
+                <div class="choose">
+                    <h2>Choose for Player</h2>
+                </div>
+                <div class="character-btn">
+                    <button class="O"> O</button>
+                    <button class="X">X</button>
+                </div>
+            </section>
+            <section class="modes fadeOut">
+                <div class="mode">
+                    <h2>Modes</h2>
+                </div>
+                <div class="mode-btn">
+                    <button class="pvp">Player v Player</button>
+                    <button class="pvc">Player v Computer</button>
+                </div>
+            </section>
+
+            <div class="strike"></div>
+            <section class="game">
+                <div class="winner">
+                    <h2>Game Start</h2>
+                </div>
+                <div class="strike"></div>
+                <div class="grid">
+                    <button class="1"></button>
+                    <button class="2"></button>
+                    <button class="3"></button>
+                    <button class="4"></button>
+                    <button class="5"></button>
+                    <button class="6"></button>
+                    <button class="7"></button>
+                    <button class="8"></button>
+                    <button class="9"></button>
+                </div>
+            </section>
+        </main>
+    <div class="next">
+        <button class="next-game">New Game</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
